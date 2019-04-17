@@ -1,0 +1,7 @@
+{
+  "name": "Teachbase Notifier",
+  "short_name": "Teachbase Notifier",
+  "gcm_sender_id": "72223018740",
+  "display": "standalone",
+  "gcm_user_visible_only": true
+}
