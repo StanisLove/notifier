@@ -25,7 +25,8 @@ defmodule Notifier.MixProject do
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.5"},
       {:plug_cowboy, "~> 1.0"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:httpoison, "~> 1.4"}
     ]
   end
 end
