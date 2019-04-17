@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export const HTTP = axios.create({
-  baseUrl: `http://127.0.0.1`,
-  headers: {}
-})
+  baseURL: 'http://127.0.0.1:8085/',
+  headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+});
