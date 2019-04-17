@@ -8,7 +8,7 @@ defmodule Notifier.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      Plug.Adapters.Cowboy.child_spec(scheme: :http, plug: Notifier.Router, options: [port: 8085])
+      # Plug.Adapters.Cowboy.child_spec(scheme: :http, plug: Notifier.Router, options: [port: 8085])
       # Starts a worker by calling: Notifier.Worker.start_link(arg)
       # {Notifier.Worker, arg}
     ]
