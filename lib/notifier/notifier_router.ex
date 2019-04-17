@@ -16,6 +16,9 @@ defmodule Notifier.Router do
     {:ok, body, conn} = read_body(conn)
     body = Poison.decode!(body)
     IO.inspect(body)
+    module_name = "Elixir.Notifier.Channels." <> String.capitalize(body["type"])
+    params = [%{settings: body["settings"]}, body["text"]]
+    apply(String.to_existing_atom(module_name), :deliver, params)
     send_resp(conn, 201, "created: #{get_in(body, ["message"])}")
   end
 
