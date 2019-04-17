@@ -8,8 +8,8 @@ defmodule Notifier.Channels.Telegram do
       [{"Content-Type", "application/json"}]
   end
 
-  def ping() do
-    HTTPoison.get construct_url("getMe")
+  def test(text) do
+    deliver %{settings: %{"chat_id" => -354449846}}, text
   end
 
   defp construct_url(url) do
