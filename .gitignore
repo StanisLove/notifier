@@ -23,3 +23,6 @@ erl_crash.dump
 notifier-*.tar
 
 /front/node_modules
+
+# Secret vars
+/config/config.secret.exs
