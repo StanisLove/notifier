@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="./favicon.ico">
     <title>front</title>
-    <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/0ab37318c4a0ff32b904745f5c5cb3f7_1.js" async></script>
+    <link rel="manifest" href="./manifest.json">
+    <script src="https://cdn.pushwoosh.com/webpush/v3/pushwoosh-web-notifications.js" async></script>
+    <script>
+      var Pushwoosh = Pushwoosh || [];
+      Pushwoosh.push(["init", {
+        logLevel: 'debug',
+        applicationCode: 'B7719-068EE',
+        defaultNotificationTitle: 'TBNotifier',
+        defaultNotificationImage: 'https://pbs.twimg.com/profile_images/839034220009914369/Vv3eZX_9.jpg',
+        autoSubscribe: true
+      }]);
+    </script>
   </head>
   <body>
     <noscript>
