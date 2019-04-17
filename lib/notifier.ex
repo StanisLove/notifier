@@ -1,6 +1,6 @@
-defmodule Server do
+defmodule Notifier do
   @moduledoc """
-  Documentation for Server.
+  Documentation for Notifier.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Server do
 
   ## Examples
 
-      iex> Server.hello()
+      iex> Notifier.hello()
       :world
 
   """
