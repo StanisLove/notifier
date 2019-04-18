@@ -1,10 +1,7 @@
 defmodule Notifier.Events.Dispatcher do
-  def dispatch({type, payload} = data) do
-    IO.inspect(data)
+  alias Notifier.Utils
 
-    module_name = "Elixir.Notifier.Events." <> (
-      type |> String.split("_") |> Enum.map(&String.capitalize/1) |> Enum.join()
-    )
-    apply(String.to_existing_atom(module_name), :trigger, [payload])
+  def dispatch({event, payload} = data) do
+    Utils.get_module("Events", event) |> apply(:trigger, [payload])
   end
 end
