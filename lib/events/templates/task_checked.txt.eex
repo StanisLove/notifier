@@ -1,0 +1,6 @@
+Ответ на задание <%= presenter.task_name %> в курсе <%= presenter.course_name %> проверен.
+<%= if presenter.success? do %>
+  Вы справились, так держать!
+<% else %>
+  Нужно ещё поработать, мы в Вас верим!
+<% end %>
