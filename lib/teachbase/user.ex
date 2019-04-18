@@ -3,5 +3,6 @@ defmodule Teachbase.User do
 
   schema "users" do
     field :name, :string
+    field :notification_settings, :map
   end
 end

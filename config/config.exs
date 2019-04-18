@@ -8,5 +8,7 @@ config :notifier, Teachbase.Repo,
   password: "teachbase",
   hostname: "localhost"
 
+config :postgrex, :json_library, Poison
+
 import_config "config.secret.exs"
 # config :teachbase, ecto_repos: [Teachbase.Repo]
