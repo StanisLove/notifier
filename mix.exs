@@ -27,7 +27,9 @@ defmodule Notifier.MixProject do
       {:plug_cowboy, "~> 1.0"},
       {:poison, "~> 3.1"},
       {:httpoison, "~> 1.4"},
-      {:redix, ">= 0.0.0"}
+      {:redix, ">= 0.0.0"},
+      {:ecto_sql, "~> 3.0"},
+      {:postgrex, ">= 0.0.0"}
     ]
   end
 end

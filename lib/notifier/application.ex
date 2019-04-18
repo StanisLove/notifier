@@ -10,7 +10,8 @@ defmodule Notifier.Application do
     children = [
       # Starts a worker by calling: Notifier.Worker.start_link(arg)
       # {Notifier.Worker, arg}
-      Notifier.Events.Listener
+      Notifier.Events.Listener,
+      Teachbase.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
