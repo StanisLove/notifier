@@ -11,7 +11,8 @@ defmodule Notifier.Application do
       # Starts a worker by calling: Notifier.Worker.start_link(arg)
       # {Notifier.Worker, arg}
       Notifier.Events.Listener,
-      Teachbase.Repo
+      Teachbase.Repo,
+      Plug.Adapters.Cowboy.child_spec(scheme: :http, plug: Notifier.Router, options: [port: 8085])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
